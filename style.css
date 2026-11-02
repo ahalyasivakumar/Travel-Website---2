@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172b4d;
+    background: #f5f7fb;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0754c7;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f39c12;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0754c7;
+}
+
+.login-btn {
+    background: #0754c7;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+
+.hero {
+    padding: 75px 6% 85px;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 59, 133, 0.9),
+            rgba(7, 84, 199, 0.4)
+        ),
+        url("https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border: 3px solid #f5b800;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr auto;
+    gap: 10px;
+
+    max-width: 1100px;
+    margin-top: 30px;
+}
+
+.search-box input,
+.search-box select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #d8deea;
+    border-radius: 6px;
+    background: white;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button {
+    background: #0754c7;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 6px;
+}
+
+.search-box button:hover {
+    background: #003d94;
+}
+
+.section {
+    padding: 45px 6%;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #68758b;
+}
+
+.light-section {
+    background: #eef3fa;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e5ed;
+    box-shadow: 0 3px 12px #00000008;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px #00000015;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #68758b;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.price {
+    font-size: 19px !important;
+    font-weight: bold;
+    color: #172b4d !important;
+    margin: 12px 0;
+}
+
+.rating {
+    color: #b87900 !important;
+    font-weight: bold;
+}
+
+.book-btn {
+    display: inline-block;
+    background: #0754c7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.book-btn:hover {
+    background: #003d94;
+}
+
+#movies {
+    background: #f0f4ff;
+}
+
+.booking-section {
+    margin: 10px 6% 45px;
+    padding: 40px 20px;
+    background: #dceaff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.booking-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.booking-section p {
+    margin-bottom: 22px;
+}
+
+footer {
+    background: #102c52;
+    color: white;
+    padding: 35px 6% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-container h2 {
+    color: #f5b800;
+    margin-bottom: 10px;
+}
+
+.footer-container h3 {
+    margin-bottom: 12px;
+}
+
+.footer-container p,
+.footer-container a {
+    color: #d2dcec;
+    font-size: 14px;
+}
+
+.footer-container a {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-container a:hover {
+    color: #f5b800;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #ffffff30;
+    padding-top: 18px;
+    font-size: 13px;
+    color: #d2dcec;
+}
+
+@media (max-width: 1000px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .booking-section {
+        margin: 10px 5% 35px;
+        padding: 30px 18px;
+    }
+
+    .booking-section h2 {
+        font-size: 24px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
